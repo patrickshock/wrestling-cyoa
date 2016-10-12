@@ -102,6 +102,9 @@ heelcustomcompany1A = ChunkOfStory.new "Pick a fight"
 heelcustomcompany1B = ChunkOfStory.new "Get to know about your gimmick"
 facecustomcompanydebut1A = ChunkOfStory.new "Get to know about your gimmick"
 facecustomcompanydebut1B = ChunkOfStory.new "Pick a fight"
+smackdownliveroyalrumblewwedebut3Romanreigns = ChunkOfStory.new "Roman Reigns."
+smackdownliveroyalrumblewwedebut3Chrisjericho = ChunkOfStory.new "Chris Jericho BABYYYYYY!"
+
 
 
 
@@ -224,6 +227,11 @@ smackdownliveroyalrumblewwedebut.story_text = "If you win the royal rumble in Sm
 championship title match against whoever is the champion at WrestleMania."
 smackdownliveroyalrumblewwedebut.question =  "You will enter the rumble at no.3, Do you want to tease it, or keep it a surprise?"
 smackdownliveroyalrumblewwedebut.choices = [smackdownliveroyalrumblewwedebut2a, smackdownliveroyalrumblewwedebut2b]
+
+smackdownliveroyalrumblewwedebut2a.story_text = "Ok so you don't tease it, now number 3 entrant to the rumble is about to come out!!
+5! 4! 3! 2! 1! then your theme hits, everyone is like who dat? when they see #{ring_name} on the titantron they went crazy!!! WOOOO!!!!!"
+smackdownliveroyalrumblewwedebut2a.question = "Who do you want to try to eliminate first? this will also make a difference in who is your tag team partner and your first rival even though it is one versus all. "
+smackdownliveroyalrumblewwedebut2a.choices = [smackdownliveroyalrumblewwedebut3Chrisjericho, smackdownliveroyalrumblewwedebut3Romanreigns]
 
 tna.story_text = "Now that you are in TNA..."
 tna.question = "Will you be a face or heel?"
