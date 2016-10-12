@@ -98,6 +98,10 @@ rawroyalrumblewwedebut = ChunkOfStory.new "Be a raw competitor that competes in 
 smackdownliveroyalrumblewwedebut = ChunkOfStory.new "Be a SmackDown Live competitor that will compete in the royal Rumble."
 smackdownliveroyalrumblewwedebut2a = ChunkOfStory.new "Keep it a surprise"
 smackdownliveroyalrumblewwedebut2b = ChunkOfStory.new "Tease it, the fans will keep on speculating on will you debut or not."
+heelcustomcompany1A = ChunkOfStory.new "Pick a fight"
+heelcustomcompany1B = ChunkOfStory.new "Get to know about your gimmick"
+facecustomcompanydebut1A = ChunkOfStory.new "Get to know about your gimmick"
+facecustomcompanydebut1B = ChunkOfStory.new "Pick a fight"
 
 
 
@@ -203,23 +207,23 @@ wwe.story_text = "Now that you are in the WWE..."
 wwe.question = "will you be a face or heel?"
 wwe.choices = [facewwedebut, heelwwedebut]
 
-facewwedebut.story_text "Now you are in the WWE HQ and you shake Triple
+facewwedebut.story_text = "Now you are in the WWE HQ and you shake Triple
 H's Hand and you sign a contract with Triple H."
-facewwedebut.question "Do you want to debut in the Royal Rumble Match or in RAW,
+facewwedebut.question = "Do you want to debut in the Royal Rumble Match or in RAW,
 SmackDown! Live, or NXT."
 facewwedebut.choices = [royalrumblewwedebut1a, rawdebut1a, smackdownlivedebut1a, nxtdebut1a]
 
-royalrumblewwedebut1a.story_text "If you win the royal rumble, Then you punch your way to WrestleMania!!!! In the main event
+royalrumblewwedebut1a.story_text = "If you win the royal rumble, Then you punch your way to WrestleMania!!!! In the main event
 which is a WORLD TITLE MATCH!!!!!!!"
-royalrumblewwedebut1a.question "What Brand will you be in, RAW or SmackDown! Live? or will you be
+royalrumblewwedebut1a.question = "What Brand will you be in, RAW or SmackDown! Live? or will you be
 the first ever NXT superstar to be in the Royal Rumble and fight for the NXT Title at WrestleMania?
 Your choice."
-royalrumblewwedebut1a.choices [nxtroyalrumblewwedebut1a, rawroyalrumblewwedebut, smackdownliveroyalrumblewwedebut]
+royalrumblewwedebut1a.choices = [nxtroyalrumblewwedebut1a, rawroyalrumblewwedebut, smackdownliveroyalrumblewwedebut]
 
-smackdownliveroyalrumblewwedebut.story_text "If you win the royal rumble in SmackDown live, then you will have a world heavyweight
+smackdownliveroyalrumblewwedebut.story_text = "If you win the royal rumble in SmackDown live, then you will have a world heavyweight
 championship title match against whoever is the champion at WrestleMania."
-smackdownliveroyalrumblewwedebut.question "You will enter the rumble at no.3, Do you want to tease it, or keep it a surprise?"
-smackdownliveroyalrumblewwedebut.choices [smackdownliveroyalrumblewwedebut2a, smackdownliveroyalrumblewwedebut2b]
+smackdownliveroyalrumblewwedebut.question =  "You will enter the rumble at no.3, Do you want to tease it, or keep it a surprise?"
+smackdownliveroyalrumblewwedebut.choices = [smackdownliveroyalrumblewwedebut2a, smackdownliveroyalrumblewwedebut2b]
 
 tna.story_text = "Now that you are in TNA..."
 tna.question = "Will you be a face or heel?"
