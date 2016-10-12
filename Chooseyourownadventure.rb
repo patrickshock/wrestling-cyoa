@@ -94,6 +94,10 @@ rawdebut1a = ChunkOfStory.new "DEBUT IN RAW!!!!! as a face...."
 smackdownlivedebut1a = ChunkOfStory.new "Debut in SmackDown! Live. as a face."
 nxtdebut1a = ChunkOfStory.new "Debut in Developmental territory, NXT, as a face!"
 nxtroyalrumblewwedebut1a = ChunkOfStory.new "Be the first NXT wrestler to Participate in the Royal Rumble Match"
+rawroyalrumblewwedebut = ChunkOfStory.new "Be a raw competitor that competes in the royal rumble.."
+smackdownliveroyalrumblewwedebut = ChunkOfStory.new "Be a SmackDown Live competitor that will compete in the royal Rumble."
+smackdownliveroyalrumblewwedebut2a = ChunkOfStory.new "Keep it a surprise"
+smackdownliveroyalrumblewwedebut2b = ChunkOfStory.new "Tease it, the fans will keep on speculating on will you debut or not."
 
 
 
@@ -212,6 +216,10 @@ the first ever NXT superstar to be in the Royal Rumble and fight for the NXT Tit
 Your choice."
 royalrumblewwedebut1a.choices [nxtroyalrumblewwedebut1a, rawroyalrumblewwedebut, smackdownliveroyalrumblewwedebut]
 
+smackdownliveroyalrumblewwedebut.story_text "If you win the royal rumble in SmackDown live, then you will have a world heavyweight
+championship title match against whoever is the champion at WrestleMania."
+smackdownliveroyalrumblewwedebut.question "You will enter the rumble at no.3, Do you want to tease it, or keep it a surprise?"
+smackdownliveroyalrumblewwedebut.choices [smackdownliveroyalrumblewwedebut2a, smackdownliveroyalrumblewwedebut2b]
 
 tna.story_text = "Now that you are in TNA..."
 tna.question = "Will you be a face or heel?"
