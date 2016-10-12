@@ -230,7 +230,7 @@ smackdownliveroyalrumblewwedebut.choices = [smackdownliveroyalrumblewwedebut2a, 
 
 smackdownliveroyalrumblewwedebut2a.story_text = "Ok so you don't tease it, now number 3 entrant to the rumble is about to come out!!
 5! 4! 3! 2! 1! then your theme hits, everyone is like who dat? when they see #{ring_name} on the titantron they went crazy!!! WOOOO!!!!!"
-smackdownliveroyalrumblewwedebut2a.question = "Who do you want to try to eliminate first? this will also make a difference in who is your tag team partner and your first rival even though it is one versus all. "
+smackdownliveroyalrumblewwedebut2a.question = "Who do you want to try to eliminate first? this will also make a difference in who is your tag team partner even though it is one versus all. "
 smackdownliveroyalrumblewwedebut2a.choices = [smackdownliveroyalrumblewwedebut3Chrisjericho, smackdownliveroyalrumblewwedebut3Romanreigns]
 
 tna.story_text = "Now that you are in TNA..."
