@@ -5,7 +5,7 @@ You will need ruby. or for windows you need to look up ruby for windows
 but after the final build there will still be updates
 
 
-##TO DO:
+## TO DO:
 * Finish all of the WWE Storylines from beginning to the end.
 * Work on TNA, I will do this a bit when I am still making the WWE Storylines
 but after I do WWE then TNA is my main project.
