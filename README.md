@@ -9,3 +9,6 @@ but after the final build there will still be updates
 * Finish all of the WWE Storylines from beginning to the end.
 * Work on TNA, I will do this a bit when I am still making the WWE Storylines
 but after I do WWE then TNA is my main project.
+
+Go to the ending branch to get the ending feature that doesn't Work
+for now. I will make branches for new features.
