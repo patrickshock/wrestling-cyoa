@@ -104,6 +104,9 @@ facecustomcompanydebut1A = ChunkOfStory.new "Get to know about your gimmick"
 facecustomcompanydebut1B = ChunkOfStory.new "Pick a fight"
 smackdownliveroyalrumblewwedebut3Romanreigns = ChunkOfStory.new "Roman Reigns."
 smackdownliveroyalrumblewwedebut3Chrisjericho = ChunkOfStory.new "Chris Jericho BABYYYYYY!"
+smackdownliveroyalrumblewwedebut3Romanreigns1A = ChunkOfStory.new "Do a finisher on Roman Reigns to eliminate him"
+smackdownliveroyalrumblewwedebut3Romanreigns1B = ChunkOfStory.new "Do the old school way of eliminating people from the royal rumble on roman reigns (He can reverse)"
+ending = ChunkOfStory.new "None"
 
 
 
@@ -157,7 +160,7 @@ start.story_text = "
 You are a wrestler in the making
 and before you become a actual wrestler."
 start.question = "How will you begin your career?"
-start.choices = [big_leagues, indie]
+start.choices = [big_leagues, indie, ending]
 
 
 big_leagues.story_text = "Ok so there are 3 big leagues to choose from."
@@ -233,6 +236,16 @@ smackdownliveroyalrumblewwedebut2a.story_text = "Ok so you don't tease it, now n
 smackdownliveroyalrumblewwedebut2a.question = "Who do you want to try to eliminate first? this will also make a difference in who is your tag team partner even though it is one versus all. "
 smackdownliveroyalrumblewwedebut2a.choices = [smackdownliveroyalrumblewwedebut3Chrisjericho, smackdownliveroyalrumblewwedebut3Romanreigns]
 
+smackdownliveroyalrumblewwedebut3Romanreigns.story_text = "Ok so then you punch roman reigns in the face, then try to eliminate him"
+smackdownliveroyalrumblewwedebut3Romanreigns.question = "Do you want to use a finisher to eliminate him or do you want to eliminate him the old school way"
+smackdownliveroyalrumblewwedebut3Romanreigns.choices = [smackdownliveroyalrumblewwedebut3Romanreigns1A, smackdownliveroyalrumblewwedebut3Romanreigns1B]
+
+
+
+
+
+
+
 tna.story_text = "Now that you are in TNA..."
 tna.question = "Will you be a face or heel?"
 tna.choices = [facetna, heeltna]
@@ -246,5 +259,10 @@ your theme song is #{theme_song} and the lyrics are #{lyrics_of_theme_song} he a
 get in big trouble if you do (like being fired. HAHAHA. or suspended. grins) you can only say PG or TV-14 swears. No F-Bomb or other TV-MA Swears"
 knowaboutyourgimmickfacetnadebutbackstage.question = "Ok so now it is your turn, Do you want to debut in a match or a promo."
 knowaboutyourgimmickfacetnadebutbackstage.choices = [matchdebuttna, promodebuttna]
+
+ending.story_text = "Then you ain't got no balls brah"
+ending.question = "Do you want to go back to the previous choice? or a restart?"
+ending.choices = [:previouschoice]
+
 
 start.display
