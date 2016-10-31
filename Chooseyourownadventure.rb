@@ -114,43 +114,46 @@ smackdownliveroyalrumblewwedebut3Chrisjericho = ChunkOfStory.new "Chris Jericho 
 
 
 
+def get_user_input
 
-puts "What is your name"
-name = gets
-puts "You are about to enter the world of wrestling, if you want to step foot in it then you will be remembered with your ring name, not as #{name}"
-puts "So speaking about ring names, What is your Ring name?"
-ring_name = gets
-puts "A catchphrase is a thing that you like to say?"
-puts "What is your catchphrase?"
-catchphrase = gets
-puts "What is your insult?"
-insult = gets
-puts "What is your theme song"
-theme_song = gets
-puts "What are the lyrics of your theme song"
-lyrics_of_theme_song = gets
-puts "The Indie Circuit is where most people start, if you get promoted to the big leagues maybe you need to change your gimmick."
-puts "If you decide to be in the Indies, What will the company be called?"
-company_indies = gets
-puts "The big leagues are the places where very few people start, it is the main place of wrestling"
-puts "If you decide to be in the big leagues, you can choose either real or fictional companies, what will the fictional one be called?"
-company_big_leagues = gets
-puts "If you want to be in a team, what will it be called. if you want to be a singles competitor then just put enter and select
-the choice that you don't want to be in a tag team."
-team_name = gets
-puts "Who is your partner, just put a random name if you dont want to be in the tag team
-and do the same thing as the last question told you."
-partner_tag_first = gets
-puts "Getting back to the fictional company, what will your boss be called?"
-boss_name = gets
-puts "who is the interviewer for the indies?"
-interviewername = gets
-puts "If you are a heel during your debut in indies or big leagues, who will be your rival?"
-rival_name = gets
-puts "but If you are a face during your debut in the indies or big leagues, who will be your rival?"
-rival_name_face = gets
-puts "Ok so lets get to the story"
+	puts "What is your name"
+	name = gets
+	puts "You are about to enter the world of wrestling, if you want to step foot in it then you will be remembered with your ring name, not as #{name}"
+	puts "So speaking about ring names, What is your Ring name?"
+	ring_name = gets
+	puts "A catchphrase is a thing that you like to say?"
+	puts "What is your catchphrase?"
+	catchphrase = gets
+	puts "What is your insult?"
+	insult = gets
+	puts "What is your theme song"
+	theme_song = gets
+	puts "What are the lyrics of your theme song"
+	lyrics_of_theme_song = gets
+	puts "The Indie Circuit is where most people start, if you get promoted to the big leagues maybe you need to change your gimmick."
+	puts "If you decide to be in the Indies, What will the company be called?"
+	company_indies = gets
+	puts "The big leagues are the places where very few people start, it is the main place of wrestling"
+	puts "If you decide to be in the big leagues, you can choose either real or fictional companies, what will the fictional one be called?"
+	company_big_leagues = gets
+	puts "If you want to be in a team, what will it be called. if you want to be a singles competitor then just put enter and select
+	the choice that you don't want to be in a tag team."
+	team_name = gets
+	puts "Who is your partner, just put a random name if you dont want to be in the tag team
+	and do the same thing as the last question told you."
+	partner_tag_first = gets
+	puts "Getting back to the fictional company, what will your boss be called?"
+	boss_name = gets
+	puts "who is the interviewer for the indies?"
+	interviewername = gets
+	puts "If you are a heel during your debut in indies or big leagues, who will be your rival?"
+	rival_name = gets
+	puts "but If you are a face during your debut in the indies or big leagues, who will be your rival?"
+	rival_name_face = gets
+	puts "Ok so lets get to the story"
 
+
+end
 
 
 start.story_text = "
@@ -247,4 +250,6 @@ get in big trouble if you do (like being fired. HAHAHA. or suspended. grins) you
 knowaboutyourgimmickfacetnadebutbackstage.question = "Ok so now it is your turn, Do you want to debut in a match or a promo."
 knowaboutyourgimmickfacetnadebutbackstage.choices = [matchdebuttna, promodebuttna]
 
-start.display
+# start is the main ChunkOfStory,
+# commenting out the display method
+# start.display
