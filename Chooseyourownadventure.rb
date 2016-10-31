@@ -29,10 +29,10 @@
 
 class ChunkOfStory
 	def initialize(label)
-		@label      = label
-		@story_text = story_text
-		@question   = question
-		@choices    = choices
+		@label      = label # <-- this is the only required argument
+		@story_text = story_text # <-- this should be a default message, during development, at least
+		@question   = question # <-- default to ""?
+		@choices    = [] # <-- present_choices is expecting an array, so []
 	end
 	attr_reader :label
 	attr_accessor :story_text
@@ -48,6 +48,7 @@ class ChunkOfStory
 		next_part.display
 	end
 
+## add a conditional to this method that prevents crashing if @choices is empty
 	def present_choices
 		index = 0
 		@choices.each do |choice|
@@ -61,6 +62,7 @@ class ChunkOfStory
 	end
 
 end
+
 
 dummy = ChunkOfStory.new "This part of the story is not written yet."
 start = ChunkOfStory.new "Story Start"
@@ -105,6 +107,8 @@ facecustomcompanydebut1A = ChunkOfStory.new "Get to know about your gimmick"
 facecustomcompanydebut1B = ChunkOfStory.new "Pick a fight"
 smackdownliveroyalrumblewwedebut3Romanreigns = ChunkOfStory.new "Roman Reigns."
 smackdownliveroyalrumblewwedebut3Chrisjericho = ChunkOfStory.new "Chris Jericho BABYYYYYY!"
+
+
 
 
 # I wrapped up all the initial user input questions
@@ -169,7 +173,7 @@ def supply_user_input
 end
 
 
-######################################  
+######################################
 # Switch the commented status of the #
 # following two lines to turn        #
 # user questions on and off.         #
@@ -275,4 +279,25 @@ knowaboutyourgimmickfacetnadebutbackstage.choices = [matchdebuttna, promodebuttn
 # start is the main ChunkOfStory,
 # comment out the display method when you need to test the code without
 # running the whole app
- start.display
+ #start.display
+
+
+ class DiagramMermaid
+ 	def initialize chunks
+ 		@chunks = chunks
+ 	end
+  def create_diagram_text
+	  puts
+		puts "Graph TD"
+  	@chunks.each do |chunk|
+			# TODO talk about refactoring into smaller methods
+			puts chunk.label.gsub(/[\.,\,!]/,'').split(' ').join('_') + " --> " + (chunk.choices.collect { |c| c.label } ).inspect
+
+  	end
+  end
+
+ end
+
+diagramer = DiagramMermaid.new [knowaboutyourgimmickfacetnadebutbackstage, promodebuttna, matchdebuttna, wwetag, tnatag, facewwedebut, heelwwedebut, facewwedebuttag, heelwwedebuttag, customcompany, customcompanytag, facecustomcompanydebut, heelcustomcompanydebut, heelindiesdebut, faceindiesdebut, faceindiesdebutinterviewA, faceindiesdebutinterviewB, faceindiesdebutinterview2A, faceindiesdebutinterview2B, royalrumblewwedebut1a, rawdebut1a, smackdownlivedebut1a, nxtdebut1a, nxtroyalrumblewwedebut1a, rawroyalrumblewwedebut, smackdownliveroyalrumblewwedebut, smackdownliveroyalrumblewwedebut2a, smackdownliveroyalrumblewwedebut2b, heelcustomcompany1A, heelcustomcompany1B, facecustomcompanydebut1A, facecustomcompanydebut1B, smackdownliveroyalrumblewwedebut3Romanreigns, smackdownliveroyalrumblewwedebut3Chrisjericho]
+
+diagramer.create_diagram_text
