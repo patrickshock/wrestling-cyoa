@@ -1,3 +1,4 @@
+#!/usr/bin/ruby
 # Start
 # You are a wrestler in the making
 # And before you become a actual wrestler
@@ -106,55 +107,76 @@ smackdownliveroyalrumblewwedebut3Romanreigns = ChunkOfStory.new "Roman Reigns."
 smackdownliveroyalrumblewwedebut3Chrisjericho = ChunkOfStory.new "Chris Jericho BABYYYYYY!"
 
 
-
-
-
-
-
-
-
-
+# I wrapped up all the initial user input questions
+# into a method. We can use this method or its
+# replacement; supply_user_input
 def get_user_input
 
 	puts "What is your name"
-	name = gets
-	puts "You are about to enter the world of wrestling, if you want to step foot in it then you will be remembered with your ring name, not as #{name}"
+	@name = gets
+	puts "You are about to enter the world of wrestling, if you want to step foot in it then you will be remembered with your ring name, not as #{@name}"
 	puts "So speaking about ring names, What is your Ring name?"
-	ring_name = gets
+	@ring_name = gets
 	puts "A catchphrase is a thing that you like to say?"
 	puts "What is your catchphrase?"
-	catchphrase = gets
+	@catchphrase = gets
 	puts "What is your insult?"
-	insult = gets
+	@insult = gets
 	puts "What is your theme song"
-	theme_song = gets
+	@theme_song = gets
 	puts "What are the lyrics of your theme song"
-	lyrics_of_theme_song = gets
+	@lyrics_of_theme_song = gets
 	puts "The Indie Circuit is where most people start, if you get promoted to the big leagues maybe you need to change your gimmick."
 	puts "If you decide to be in the Indies, What will the company be called?"
-	company_indies = gets
+	@company_indies = gets
 	puts "The big leagues are the places where very few people start, it is the main place of wrestling"
 	puts "If you decide to be in the big leagues, you can choose either real or fictional companies, what will the fictional one be called?"
-	company_big_leagues = gets
+	@company_big_leagues = gets
 	puts "If you want to be in a team, what will it be called. if you want to be a singles competitor then just put enter and select
 	the choice that you don't want to be in a tag team."
-	team_name = gets
+	@team_name = gets
 	puts "Who is your partner, just put a random name if you dont want to be in the tag team
 	and do the same thing as the last question told you."
-	partner_tag_first = gets
+	@partner_tag_first = gets
 	puts "Getting back to the fictional company, what will your boss be called?"
-	boss_name = gets
+	@boss_name = gets
 	puts "who is the interviewer for the indies?"
-	interviewername = gets
+	@interviewername = gets
 	puts "If you are a heel during your debut in indies or big leagues, who will be your rival?"
-	rival_name = gets
+	@rival_name = gets
 	puts "but If you are a face during your debut in the indies or big leagues, who will be your rival?"
-	rival_name_face = gets
+	@rival_name_face = gets
 	puts "Ok so lets get to the story"
 
 
 end
 
+def supply_user_input
+	@name = "<NAME>"
+	@ring_name = "<RING_NAME>"
+	@catchphrase = "<CATCHPHRASE>"
+	@insult = "<INSULT>"
+	@theme_song = "<THEME_SONG>"
+	@lyrics_of_theme_song = "<LYRICS_OF_THEME_SONG>"
+	@company_indies = "<COMPANY_INDIES>"
+	@company_big_leagues = "<COMPANY_BIG_LEAGUES>"
+	@team_name = "<TEAM_NAME>"
+	@partner_tag_first = "<PARTNER_TAG_FIRST>"
+	@boss_name = "<BOSS_NAME>"
+	@interviewername = "<INTERVIEWERNAME>"
+	@rival_name = "<RIVAL_NAME>"
+	@rival_name_face = "<RIVAL_NAME_FACE>"
+end
+
+
+######################################  
+# Switch the commented status of the #
+# following two lines to turn        #
+# user questions on and off.         #
+######################################
+
+#get_user_input
+supply_user_input
 
 start.story_text = "
 You are a wrestler in the making
@@ -167,12 +189,12 @@ big_leagues.story_text = "Ok so there are 3 big leagues to choose from."
 big_leagues.question = "Which will you choose? will you be singles or tag team at the beginning?"
 big_leagues.choices = [wwe, tna, wwetag, tnatag, customcompany, customcompanytag]
 
-wwetag.story_text = "Ok so you are in the team called #{team_name} with #{partner_tag_first}"
-wwetag.question = "Will #{ring_name} (you) and #{partner_tag_first} be face or heel?"
+wwetag.story_text = "Ok so you are in the team called #{@team_name} with #{@partner_tag_first}"
+wwetag.question = "Will #{@ring_name} (you) and #{@partner_tag_first} be face or heel?"
 wwetag.choices = [facewwedebuttag, heelwwedebuttag]
 
-customcompany.story_text = "Ok so you are in #{company_big_leagues} and you are in singles competition. For now. so then you are about
-to sign a contract with #{boss_name}, and you got a contract of 900K dollars, good for a start in the big leagues. "
+customcompany.story_text = "Ok so you are in #{@company_big_leagues} and you are in singles competition. For now. so then you are about
+to sign a contract with #{@boss_name}, and you got a contract of 900K dollars, good for a start in the big leagues. "
 customcompany.question = "Do you want to be a face or a heel?"
 customcompany.choices = [facecustomcompanydebut, heelcustomcompanydebut]
 
@@ -189,18 +211,18 @@ facecustomcompanydebut.choices = [facecustomcompanydebut1A, facecustomcompanydeb
 
 indie.story_text =
 "You are going to be hitting people with chairs everyday.
-Good for you. You are going to have to make a name for yourself. You will be in #{company_indies}"
+Good for you. You are going to have to make a name for yourself. You will be in #{@company_indies}"
 indie.question = "How will you impress the audience? Will you be face or heel?"
 indie.choices = [faceindiesdebut, heelindiesdebut]
 
 
-faceindiesdebut.story_text = "You will be face in the indies and you are in the backstage of #{company_indies} and you are
-really enjoying it, so far you just arrived and you go take a interview with #{interviewername} "
+faceindiesdebut.story_text = "You will be face in the indies and you are in the backstage of #{@company_indies} and you are
+really enjoying it, so far you just arrived and you go take a interview with #{@interviewername} "
 faceindiesdebut.question = "Do you want to be yourself or be a heel"
 faceindiesdebut.choices = [faceindiesdebutinterviewA, faceindiesdebutinterviewB]
 
-faceindiesdebutinterviewA.story_text = "You start with saying, thank you #{interviewername}. It's my pleasure to be your
-guest tonight. then #{interviewername} says thank you, he then asks when you will debut. you say, It's a secret. he laughs. then
+faceindiesdebutinterviewA.story_text = "You start with saying, thank you #{@interviewername}. It's my pleasure to be your
+guest tonight. then #{@interviewername} says thank you, he then asks when you will debut. you say, It's a secret. he laughs. then
 he asks what do you think about the fans."
 faceindiesdebutinterviewA.question = "Do you want to act face or heel with this question?"
 faceindiesdebutinterviewA.choices = [faceindiesdebutinterview2A, faceindiesdebutinterview2B]
@@ -232,7 +254,7 @@ smackdownliveroyalrumblewwedebut.question =  "You will enter the rumble at no.3,
 smackdownliveroyalrumblewwedebut.choices = [smackdownliveroyalrumblewwedebut2a, smackdownliveroyalrumblewwedebut2b]
 
 smackdownliveroyalrumblewwedebut2a.story_text = "Ok so you don't tease it, now number 3 entrant to the rumble is about to come out!!
-5! 4! 3! 2! 1! then your theme hits, everyone is like who dat? when they see #{ring_name} on the titantron they went crazy!!! WOOOO!!!!!"
+5! 4! 3! 2! 1! then your theme hits, everyone is like who dat? when they see #{@ring_name} on the titantron they went crazy!!! WOOOO!!!!!"
 smackdownliveroyalrumblewwedebut2a.question = "Who do you want to try to eliminate first? this will also make a difference in who is your tag team partner even though it is one versus all. "
 smackdownliveroyalrumblewwedebut2a.choices = [smackdownliveroyalrumblewwedebut3Chrisjericho, smackdownliveroyalrumblewwedebut3Romanreigns]
 
@@ -240,16 +262,17 @@ tna.story_text = "Now that you are in TNA..."
 tna.question = "Will you be a face or heel?"
 tna.choices = [facetna, heeltna]
 
-facetna.story_text = "Ok so then you are #{name} and you are in TNA. Good even though TNA is worse than WWE, They use the talent
+facetna.story_text = "Ok so then you are #{@name} and you are in TNA. Good even though TNA is worse than WWE, They use the talent
 wisely. now you are in The backstage."
 facetna.question = "What will you do?"
 facetna.choices = [dummy, knowaboutyourgimmickfacetnadebutbackstage]
-knowaboutyourgimmickfacetnadebutbackstage.story_text = "OK so the gimmick manager told you this, Your ring name is #{ring_name} and you are a face.
-your theme song is #{theme_song} and the lyrics are #{lyrics_of_theme_song} he also said, Do not swear in front of the camera, you will
+knowaboutyourgimmickfacetnadebutbackstage.story_text = "OK so the gimmick manager told you this, Your ring name is #{@ring_name} and you are a face.
+your theme song is #{@theme_song} and the lyrics are #{@lyrics_of_theme_song} he also said, Do not swear in front of the camera, you will
 get in big trouble if you do (like being fired. HAHAHA. or suspended. grins) you can only say PG or TV-14 swears. No F-Bomb or other TV-MA Swears"
 knowaboutyourgimmickfacetnadebutbackstage.question = "Ok so now it is your turn, Do you want to debut in a match or a promo."
 knowaboutyourgimmickfacetnadebutbackstage.choices = [matchdebuttna, promodebuttna]
 
 # start is the main ChunkOfStory,
-# commenting out the display method
-# start.display
+# comment out the display method when you need to test the code without
+# running the whole app
+ start.display
