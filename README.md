@@ -15,4 +15,5 @@ If anyone wants to help then you are welcome to help.
 **YOU NEED RUBY EXPERIENCE**
 
 Go to the ending branch to get the ending feature that doesn't Work
-for now. I will make branches for new features
+for now. I will make branches for new Features
+* Switch Companies from big leagues to big leagues, indie to big leagues or big leagues to indie
