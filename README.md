@@ -9,3 +9,5 @@ but after the final build there will still be updates
 * Finish all of the WWE Storylines from beginning to the end.
 * Work on TNA, I will do this a bit when I am still making the WWE Storylines
 but after I do WWE then TNA is my main project.
+* And right after TNA Then I do the indies.
+* Add the feature to switch companies or switch from Big Leagues to The Indies, either by getting released or quitting. (Maybe more ways too, Who knows)
