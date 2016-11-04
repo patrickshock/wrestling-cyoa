@@ -279,7 +279,7 @@ knowaboutyourgimmickfacetnadebutbackstage.choices = [matchdebuttna, promodebuttn
 # start is the main ChunkOfStory,
 # comment out the display method when you need to test the code without
 # running the whole app
- #start.display
+# start.display
 
 
  class DiagramMermaid
@@ -297,7 +297,18 @@ knowaboutyourgimmickfacetnadebutbackstage.choices = [matchdebuttna, promodebuttn
   end
 
  end
+arr = [knowaboutyourgimmickfacetnadebutbackstage, promodebuttna, matchdebuttna, wwetag, tnatag, facewwedebut, heelwwedebut, facewwedebuttag, heelwwedebuttag, customcompany, customcompanytag, facecustomcompanydebut, heelcustomcompanydebut, heelindiesdebut, faceindiesdebut, faceindiesdebutinterviewA, faceindiesdebutinterviewB, faceindiesdebutinterview2A, faceindiesdebutinterview2B, royalrumblewwedebut1a, rawdebut1a, smackdownlivedebut1a, nxtdebut1a, nxtroyalrumblewwedebut1a, rawroyalrumblewwedebut, smackdownliveroyalrumblewwedebut, smackdownliveroyalrumblewwedebut2a, smackdownliveroyalrumblewwedebut2b, heelcustomcompany1A, heelcustomcompany1B, facecustomcompanydebut1A, facecustomcompanydebut1B, smackdownliveroyalrumblewwedebut3Romanreigns, smackdownliveroyalrumblewwedebut3Chrisjericho]
+diagramer = DiagramMermaid.new arr
 
-diagramer = DiagramMermaid.new [knowaboutyourgimmickfacetnadebutbackstage, promodebuttna, matchdebuttna, wwetag, tnatag, facewwedebut, heelwwedebut, facewwedebuttag, heelwwedebuttag, customcompany, customcompanytag, facecustomcompanydebut, heelcustomcompanydebut, heelindiesdebut, faceindiesdebut, faceindiesdebutinterviewA, faceindiesdebutinterviewB, faceindiesdebutinterview2A, faceindiesdebutinterview2B, royalrumblewwedebut1a, rawdebut1a, smackdownlivedebut1a, nxtdebut1a, nxtroyalrumblewwedebut1a, rawroyalrumblewwedebut, smackdownliveroyalrumblewwedebut, smackdownliveroyalrumblewwedebut2a, smackdownliveroyalrumblewwedebut2b, heelcustomcompany1A, heelcustomcompany1B, facecustomcompanydebut1A, facecustomcompanydebut1B, smackdownliveroyalrumblewwedebut3Romanreigns, smackdownliveroyalrumblewwedebut3Chrisjericho]
+#diagramer.create_diagram_text
+counter = 0
+arr.each do |chunk|
+counter += 1
+	puts "<!-- slide -->"
+	puts "#{chunk.story_text}"
+	puts "#{counter}"
 
-diagramer.create_diagram_text
+
+
+
+end
