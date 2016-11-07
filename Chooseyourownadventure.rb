@@ -107,8 +107,14 @@ facecustomcompanydebut1A = ChunkOfStory.new "Get to know about your gimmick"
 facecustomcompanydebut1B = ChunkOfStory.new "Pick a fight"
 smackdownliveroyalrumblewwedebut3Romanreigns = ChunkOfStory.new "Roman Reigns."
 smackdownliveroyalrumblewwedebut3Chrisjericho = ChunkOfStory.new "Chris Jericho BABYYYYYY!"
-
-
+wwehavemanager = ChunkOfStory.new "Have a manager/valet in the WWE"
+tnahavemanager = ChunkOfStory.new "Have a manager/valet in TNA"
+customcompanyhavemanager = ChunkOfStory.new "Have a manager/valet in a custom company"
+wwehavemanager1A = ChunkOfStory.new "Have your girlfriend be your manager, if you answered the question at the very beginning."
+wwehavemanager1B = ChunkOfStory.new "Have your best friend Bob be your manager, before you choose this then think about your girlfriend's feelings since she wants to
+be your manager."
+wwehavemanager2A = ChunkOfStory.new "Get your gimmick info from the gimmick manager"
+wwehavemanager2B = ChunkOfStory.new "Pick a fight"
 
 
 # I wrapped up all the initial user input questions
@@ -150,6 +156,9 @@ def get_user_input
 	@rival_name = gets
 	puts "but If you are a face during your debut in the indies or big leagues, who will be your rival?"
 	@rival_name_face = gets
+	puts "If you want to pursue a romance and get a random girlfriend skip this question, but if you want to achieve it
+	the easy way, What is your girlfriend's name? Just asking."
+	@girlfriendnamebeginning = gets
 	puts "Ok so lets get to the story"
 
 
@@ -170,6 +179,7 @@ def supply_user_input
 	@interviewername = "<INTERVIEWERNAME>"
 	@rival_name = "<RIVAL_NAME>"
 	@rival_name_face = "<RIVAL_NAME_FACE>"
+	@girlfriendnamebeginning = "<girlfriendnamebeginning>"
 end
 
 
@@ -179,19 +189,19 @@ end
 # user questions on and off.         #
 ######################################
 
-#get_user_input
-supply_user_input
+get_user_input
+#supply_user_input
 
 start.story_text = "
 You are a wrestler in the making
 and before you become a actual wrestler."
-start.question = "How will you begin your career?"
-start.choices = [big_leagues, indie]
+start.question = "How will you begin your career????"
+start.choices = [big_leagues, indie,]
 
 
 big_leagues.story_text = "Ok so there are 3 big leagues to choose from."
-big_leagues.question = "Which will you choose? will you be singles or tag team at the beginning?"
-big_leagues.choices = [wwe, tna, wwetag, tnatag, customcompany, customcompanytag]
+big_leagues.question = "Which will you choose? will you be singles or tag team at the beginning? Also do you have a manager/valet???"
+big_leagues.choices = [wwe, tna, wwetag, tnatag, customcompany, customcompanytag, wwehavemanager, tnahavemanager, customcompanyhavemanager]
 
 wwetag.story_text = "Ok so you are in the team called #{@team_name} with #{@partner_tag_first}"
 wwetag.question = "Will #{@ring_name} (you) and #{@partner_tag_first} be face or heel?"
@@ -275,11 +285,18 @@ your theme song is #{@theme_song} and the lyrics are #{@lyrics_of_theme_song} he
 get in big trouble if you do (like being fired. HAHAHA. or suspended. grins) you can only say PG or TV-14 swears. No F-Bomb or other TV-MA Swears"
 knowaboutyourgimmickfacetnadebutbackstage.question = "Ok so now it is your turn, Do you want to debut in a match or a promo."
 knowaboutyourgimmickfacetnadebutbackstage.choices = [matchdebuttna, promodebuttna]
-
+wwehavemanager.story_text = "OK so you will have a manager, you need to contact someone to be your manager."
+wwehavemanager.question = "Who will you contact, your girlfriend?(If you entered the name for your girlfriend then you can choose
+this.)or your very good friend.(His name is Bob, he is great at wrestling but if you choose him
+over your girlfriend then maybe your girlfriend would be sad.)"
+wwehavemanager.choices = [wwehavemanager1A, wwehavemanager1B]
+wwehavemanager1A.story_text = "You contact your girlfriend #{girlfriendnamebeginning} and then she says OK babe."
+wwehavemanager1A.question = "Now you are in backstage for your debut with #{girlfriendnamebeginning}, do you want to pick a fight or get your gimmick info?"
+wwehavemanager1A.choices = [wwehavemanager2A, wwehavemanager2B]
 # start is the main ChunkOfStory,
 # comment out the display method when you need to test the code without
 # running the whole app
-# start.display
+start.display
 
 
  class DiagramMermaid
@@ -291,7 +308,7 @@ knowaboutyourgimmickfacetnadebutbackstage.choices = [matchdebuttna, promodebuttn
 		puts "Graph TD"
   	@chunks.each do |chunk|
 			# TODO talk about refactoring into smaller methods
-			puts chunk.label.gsub(/[\.,\,!]/,'').split(' ').join('_') + " --> " + (chunk.choices.collect { |c| c.label } ).inspect
+			puts chunk.label#.gsub(/[\.,\,!]/,'').split(' ').join('_') + " --> " + (chunk.choices.collect { |c| c.label } ).inspect
 
   	end
   end
